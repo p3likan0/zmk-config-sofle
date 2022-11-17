@@ -50,6 +50,7 @@
             >;
 
             ssensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_Layer__1 {
@@ -83,11 +84,11 @@
 
         layer_Layer__3 {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &trans  &trans
-         &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans
+ &trans         &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+ &trans        &kp ESC      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+ &trans  &kp BACKSPACE  &kp DELETE  &trans  &trans  &trans                  &trans  &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &trans  &trans
+ &trans        &kp TAB      &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &trans  &trans
+                &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans
             >;
         };
     };
