@@ -1,11 +1,8 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-
 /* THIS FILE WAS GENERATED!
  *
  * This file was generated automatically. You may or may not want to
@@ -21,10 +18,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -32,38 +31,41 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
-    &kp ESCAPE        &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5                                     &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp GRAVE
-       &kp TAB    &kp SINGLE_QUOTE       &kp COMMA         &kp DOT             &kp P         &kp Y                                            &kp F              &kp G            &kp C            &kp R                &kp L      &kp SLASH
- &kp BACKSPACE  &hm LEFT_CONTROL A  &hm LEFT_ALT O  &hm LEFT_GUI E  &hm LEFT_SHIFT U         &kp I                                            &kp D  &hm RIGHT_SHIFT H  &hm RIGHT_GUI T  &hm RIGHT_ALT N  &hm RIGHT_CONTROL S      &kp MINUS
-        &to 1     &lt 2 SEMICOLON           &kp Q           &kp J             &kp K         &kp X            &kp K_MUTE  &kp PAGE_UP         &kp B              &kp M            &kp W            &kp V              &lt 2 Z  &kp EQUAL
-                            &trans          &trans          &trans         &hm LA(LC(LS(LEFT_GUI))) SPACE        &trans                                           &trans         &kp RETURN            &mo 3           &trans               &trans
+    &kp ESCAPE        &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3                    &kp NUMBER_4  &kp NUMBER_5                           &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0  &kp GRAVE
+    &kp ESCAPE    &kp SINGLE_QUOTE       &kp COMMA         &kp DOT                           &kp P         &kp Y                                  &kp F              &kp G            &kp C            &kp R                &kp L  &kp SLASH
+ &kp BACKSPACE  &hm LEFT_CONTROL A  &hm LEFT_ALT O  &hm LEFT_GUI E                &hm LEFT_SHIFT U         &kp I                                  &kp D  &hm RIGHT_SHIFT H  &hm RIGHT_GUI T  &hm RIGHT_ALT N  &hm RIGHT_CONTROL S  &kp MINUS
+       &kp TAB     &lt 2 SEMICOLON           &kp Q           &kp J                           &kp K         &kp X  &kp K_MUTE  &kp PAGE_UP         &kp B              &kp M            &kp W            &kp V              &lt 2 Z  &kp EQUAL
+                            &trans          &trans          &trans  &hm LA(LC(LS(LEFT_GUI))) SPACE        &trans                                 &trans         &kp RETURN            &mo 3           &trans               &trans
             >;
-          sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
+            ssensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-       
-       layer_Layer__1 {
-// ------------------------------------------------------------------------------------------------------------
-// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+
+        layer_Layer__1 {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                      &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &to 0
-&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                       &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                       &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE &none     &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &kp LCTRL &trans  &kp RET    &kp SPACE &trans  &kp RCTRL &kp RALT  &kp RGUI
+ &kp GRAVE    &kp N1    &kp N2     &kp N3  &kp N4   &kp N5                         &kp N6  &kp N7     &kp N8    &kp N9    &kp N0      &to 0
+   &kp ESC     &kp Q     &kp W      &kp E   &kp R    &kp T                          &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSPC
+   &kp TAB     &kp A     &kp S      &kp D   &kp F    &kp G                          &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+ &kp LSHFT     &kp Z     &kp X      &kp C   &kp V    &kp B  &kp C_MUTE   &none      &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+            &kp LGUI  &kp LALT  &kp LCTRL  &trans  &kp RET                      &kp SPACE  &trans  &kp RCTRL  &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -71,23 +73,22 @@
 
         layer_Layer__2 {
             bindings = <
- &trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                  &kp F6        &kp F7        &kp F8        &kp F9       &kp F10  &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                            &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
- &trans        &trans        &trans        &trans        &trans        &trans                                  &trans        &kp BACKSLASH     &kp LEFT_BRACKET    &kp RIGHT_BRACKET        &trans  &trans
- &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans
-               &trans        &trans        &trans        &trans        &trans                                  &trans        &trans        &trans        &trans        &trans
+ &trans        &kp F1        &kp F2        &kp F3        &kp F4         &kp F5                        &kp F6        &kp F7            &kp F8             &kp F9       &kp F10  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0  &trans
+ &trans        &trans        &trans        &trans    &kp LSHIFT  &kp BACKSLASH                     &kp SLASH    &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &trans
+ &trans        &trans        &trans        &trans        &trans         &trans  &trans  &trans     &kp GRAVE        &trans            &trans             &trans     &kp EQUAL  &trans
+               &trans        &trans        &trans        &trans         &trans                        &trans        &trans            &trans             &trans        &trans
             >;
         };
 
         layer_Layer__3 {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans    &trans          &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans    &trans          &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans    &kp LA(LEFT)   &kp UP_ARROW     &kp LA(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-         &trans  &trans  &trans  &trans  &trans                            &trans    &trans          &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans
             >;
         };
-
     };
 };
