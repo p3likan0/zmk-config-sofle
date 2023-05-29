@@ -10,8 +10,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -57,11 +57,11 @@
 
         default_layer {
             bindings = <
-    &kp ESCAPE        &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3                    &kp NUMBER_4  &kp NUMBER_5                           &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0  &kp GRAVE
-    &kp ESCAPE    &kp SINGLE_QUOTE       &kp COMMA         &kp DOT                           &kp P         &kp Y                                  &kp F              &kp G            &kp C            &kp R                &kp L  &kp SLASH
- &kp BACKSPACE  &hm LEFT_CONTROL A  &hm LEFT_ALT O  &hm LEFT_GUI E                &hm LEFT_SHIFT U         &kp I                                  &kp D  &hm RIGHT_SHIFT H  &hm RIGHT_GUI T  &hm RIGHT_ALT N  &hm RIGHT_CONTROL S  &kp MINUS
-       &kp TAB     &lt 2 SEMICOLON           &kp Q           &kp J                           &kp K         &kp X  &kp K_MUTE  &kp PAGE_UP         &kp B              &kp M            &kp W            &kp V              &lt 2 Z  &kp EQUAL
-                            &trans          &trans          &trans  &hm LA(LC(LS(LEFT_GUI))) SPACE        &trans                                 &trans         &kp RETURN            &mo 3           &trans               &trans
+   &kp ESCAPE        &kp NUMBER_1     &kp NUMBER_2    &kp NUMBER_3                    &kp NUMBER_4  &kp NUMBER_5                           &kp NUMBER_6       &kp NUMBER_7        &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0  &kp GRAVE
+   &kp ESCAPE    &kp SINGLE_QUOTE        &kp COMMA         &kp DOT                           &kp P         &kp Y                                  &kp F              &kp G               &kp C            &kp R                &kp L  &kp SLASH
+&kp BACKSPACE  &hm LEFT_CONTROL A   &hm LEFT_ALT O  &hm LEFT_GUI E                &hm LEFT_SHIFT U         &kp I                                  &kp D  &hm RIGHT_SHIFT H     &hm RIGHT_GUI T  &hm RIGHT_ALT N  &hm RIGHT_CONTROL S  &kp MINUS
+      &kp TAB     &lt 2 SEMICOLON            &kp Q           &kp J                           &kp K         &kp X  &kp K_MUTE  &kp PAGE_UP         &kp B              &kp M               &kp W            &kp V              &lt 2 Z  &kp EQUAL
+               &kp LC(LEFT_SHIFT)  &kp LA(LS(TAB))     &kp LA(TAB)  &hm LA(LC(LS(LEFT_GUI))) SPACE    &caps_word                             &kp RETURN              &mo 3  &kp RC(LEFT_ARROW)    &kp RC(RIGHT)        &kp RC(RSHFT)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -76,11 +76,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
- &kp GRAVE    &kp N1    &kp N2     &kp N3  &kp N4   &kp N5                           &kp N6  &kp N7     &kp N8    &kp N9    &kp N0      &to 0
-   &kp ESC     &kp Q     &kp W      &kp E   &kp R    &kp T                            &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSPC
-   &kp TAB     &kp A     &kp S      &kp D   &kp F    &kp G                            &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
- &kp LSHFT     &kp Z     &kp X      &kp C   &kp V    &kp B  &kp C_MUTE  &kp HOME      &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-            &kp LGUI  &kp LALT  &kp LCTRL  &trans  &kp RET                        &kp SPACE  &trans  &kp RCTRL  &kp RALT  &kp RGUI
+&kp GRAVE    &kp N1    &kp N2     &kp N3  &kp N4   &kp N5                           &kp N6  &kp N7     &kp N8    &kp N9    &kp N0      &to 0
+  &kp ESC     &kp Q     &kp W      &kp E   &kp R    &kp T                            &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSPC
+  &kp TAB     &kp A     &kp S      &kp D   &kp F    &kp G                            &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+&kp LSHFT     &kp Z     &kp X      &kp C   &kp V    &kp B  &kp C_MUTE  &kp HOME      &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+           &kp LGUI  &kp LALT  &kp LCTRL  &trans  &kp RET                        &kp SPACE  &trans  &kp RCTRL  &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -88,31 +88,31 @@
 
         Symbols {
             bindings = <
- &trans        &kp F1        &kp F2        &kp F3        &kp F4         &kp F5                        &kp F6        &kp F7            &kp F8             &kp F9       &kp F10  &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0  &trans
- &trans        &trans        &trans        &trans    &kp LSHIFT  &kp BACKSLASH                     &kp SLASH    &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &trans
- &trans        &trans        &trans        &trans        &trans         &trans  &trans  &trans     &kp GRAVE        &trans            &trans             &trans     &kp EQUAL  &trans
-               &trans        &trans        &trans        &trans         &trans                        &trans        &trans            &trans             &trans        &trans
+&trans        &kp F1        &kp F2        &kp F3        &kp F4         &kp F5                        &kp F6        &kp F7            &kp F8             &kp F9       &kp F10  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans        &trans        &trans        &trans    &kp LSHIFT  &kp BACKSLASH                     &kp SLASH    &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp MINUS  &trans
+&trans        &trans        &trans        &trans        &trans         &trans  &trans  &trans     &kp GRAVE        &trans            &trans             &trans     &kp EQUAL  &trans
+              &trans        &trans        &trans        &trans         &trans                        &trans        &trans            &trans             &trans        &trans
             >;
         };
 
         Mission {
             bindings = <
- &trans         &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
- &trans        &kp ESC      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
- &trans  &kp BACKSPACE  &kp DELETE  &trans  &trans  &trans                  &trans  &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &trans  &trans
- &trans        &kp TAB      &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &trans  &trans
-                &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans
+&trans         &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+&trans        &kp ESC      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans  &trans
+&trans  &kp BACKSPACE  &kp DELETE  &trans  &trans  &trans                  &trans  &kp LA(LEFT)    &kp UP_ARROW  &kp LA(RIGHT)  &trans  &trans
+&trans        &kp TAB      &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT  &kp DOWN_ARROW      &kp RIGHT  &trans  &trans
+               &trans      &trans  &trans  &trans  &trans                  &trans        &trans          &trans         &trans  &trans
             >;
         };
 
         Settings {
             bindings = <
- &bootloader      &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &bootloader
-      &trans  &bt BT_CLR        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans       &trans
-      &trans      &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans       &trans
-      &trans      &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
-                  &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans
+&bootloader      &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &bootloader
+     &trans  &bt BT_CLR        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans       &trans
+     &trans      &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans       &trans
+     &trans      &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans
+                 &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
