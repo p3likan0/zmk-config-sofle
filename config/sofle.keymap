@@ -57,14 +57,16 @@
 
         default_layer {
             bindings = <
-   &kp ESCAPE        &kp NUMBER_1     &kp NUMBER_2    &kp NUMBER_3                    &kp NUMBER_4  &kp NUMBER_5                           &kp NUMBER_6       &kp NUMBER_7        &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0  &kp GRAVE
-   &kp ESCAPE    &kp SINGLE_QUOTE        &kp COMMA         &kp DOT                           &kp P         &kp Y                                  &kp F              &kp G               &kp C            &kp R                &kp L  &kp SLASH
-&kp BACKSPACE  &hm LEFT_CONTROL A   &hm LEFT_ALT O  &hm LEFT_GUI E                &hm LEFT_SHIFT U         &kp I                                  &kp D  &hm RIGHT_SHIFT H     &hm RIGHT_GUI T  &hm RIGHT_ALT N  &hm RIGHT_CONTROL S  &kp MINUS
-      &kp TAB     &lt 2 SEMICOLON            &kp Q           &kp J                           &kp K         &kp X  &kp K_MUTE  &kp PAGE_UP         &kp B              &kp M               &kp W            &kp V              &lt 2 Z  &kp EQUAL
-               &kp LC(LEFT_SHIFT)  &kp LA(LS(TAB))     &kp LA(TAB)  &hm LA(LC(LS(LEFT_GUI))) SPACE    &caps_word                             &kp RETURN              &mo 3  &kp RC(LEFT_ARROW)    &kp RC(RIGHT)        &kp RC(RSHFT)
+        &none  &none  &none  &none      &none  &none                            &none  &none      &none       &none          &none  &none
+        &none  &kp Q  &kp W  &kp F      &kp P  &kp B                            &kp J  &kp L      &kp U       &kp Y  &kp SEMICOLON  &none
+&kp BACKSPACE  &kp A  &kp R  &kp S      &kp T  &kp G                            &kp M  &kp N      &kp E       &kp I          &kp O  &none
+        &none  &kp Z  &kp X  &kp C      &kp D  &kp V  &kp K_MUTE  &kp F11       &kp K  &kp H  &kp COMMA  &kp PERIOD      &kp SLASH  &none
+               &none  &none  &none  &kp SPACE  &none                       &kp RETURN  &none      &none       &none          &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(PG_UP) LC(PG_DN)>;
         };
 
         QWERTY {
